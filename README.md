@@ -21,6 +21,49 @@ STEP 5: Remove outliers using IQR
 STEP 6: Use zscore of to remove outliers
 
 # Coding and Output
-            <<include your coding and its corressponding output screen shots here>>
+```
+     import pandas as pd
+     df=pd.read_csv('D:Data_set (1).csv')
+     print(df)
+     print(data)
+```
+<img width="609" height="661" alt="image" src="https://github.com/user-attachments/assets/6733c7cc-81bb-4700-a842-1323abe8b2d8" />
+```
+df.describe()
+```
+<img width="609" height="236" alt="image" src="https://github.com/user-attachments/assets/cbf4f1cb-e026-4c4e-a87e-868204ba7cda" />
+```
+df=pd.DataFrame(df)
+print(df.isnull())
+```
+<img width="672" height="449" alt="image" src="https://github.com/user-attachments/assets/da53dcea-8590-4184-8fe4-4df73d96477d" />
+```
+import pandas as pd
+data = pd.read_csv("C:/Users/acer/Downloads/Data_set (1).csv")
+df = pd.DataFrame(data)
+dfd = df.dropna()
+print("AFTER DROPNA")
+print(dfd)
+```
+<img width="702" height="674" alt="image" src="https://github.com/user-attachments/assets/a95bfb3b-c33f-4d42-8274-54639f027f28" />
+```
+dfd = df.dropna(axis=1)
+
+print("AFTER DROPNA")
+print(dfd)
+```
+<img width="471" height="254" alt="image" src="https://github.com/user-attachments/assets/b1362da2-f70f-4445-9f33-3b9fb8bf3f58" />
+```
+dfd=df.dropna(axis=1,inplace=True)
+```
+<img width="635" height="59" alt="image" src="https://github.com/user-attachments/assets/190597ac-f545-4e6c-88af-f5766dc1e90c" />
+
+
+
+
+
+
+
+
 # Result
           <<include your Result here>>
